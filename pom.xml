@@ -96,6 +96,12 @@
                 <version>1.7.1</version>
             </extension>
         </extensions>
+	<sourceDirectory>main/java</sourceDirectory>
+	<resources>
+	    <resource>
+	        <directory>main/resources</directory>
+	</resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -112,6 +118,7 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <version>3.13.0</version>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <compilerArgs>
@@ -154,7 +161,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.3</version>
+                <version>3.5.3</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
