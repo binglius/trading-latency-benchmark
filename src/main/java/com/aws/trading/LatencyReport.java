@@ -71,7 +71,10 @@ public class LatencyReport {
                             row.put("source", matcher.group(1));
                             row.put("destination", matcher.group(2));
                         } else {
-                            LOGGER.error("Unable to parse the input string: {}", file.toString());
+			    // 不匹配时使用默认值
+			    row.put("source", "unknown");
+			    row.put("destination", "unknown");
+			    LOGGER.warn("Using default values for unmatched path: {}", file.toString());
                         }
                         return row;
                     }).collect(Collectors.toList());
